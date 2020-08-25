@@ -9,7 +9,7 @@ $email = $_POST["email"];
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, 'https://test.www.instamojo.com/api/1.1/payment-requests/');
+curl_setopt($ch, CURLOPT_URL, 'https://test.instamojo.com/api/1.1/payment-requests/');
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
@@ -21,9 +21,9 @@ $payload = Array(
     'amount' => $amount,
     'phone' => $phone,
     'buyer_name' => $name,
-    'redirect_url' => 'http://www.example.com/redirect/',
+    'redirect_url' => 'http://beta9jaapp.com/post.php',
     'send_email' => true,
-    'webhook' => 'http://www.example.com/webhook/',
+    'webhook' => 'http://beta9jaapp.com/post.php',
     'send_sms' => true,
     'email' => $email,
     'allow_repeated_payments' => false
